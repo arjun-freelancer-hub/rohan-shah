@@ -33,23 +33,23 @@ export default function ProudMoments() {
     <section className="w-full flex flex-col md:flex-row items-center justify-between py-16 px-4 md:px-16 bg-white">
       {/* Left Side */}
       <div className="flex-1 flex flex-col items-start mb-8 md:mb-0 md:mr-12 max-w-md">
-        <h2 className="text-4xl md:text-6xl font-bold text-black leading-tight mb-4">
+        <h2 className="text-5xl md:text-7xl font-extrabold text-black leading-tight mb-4" style={{ fontFamily: 'Poppins, sans-serif', letterSpacing: '-1px' }}>
           Proud <br /> Moments
         </h2>
-        <p className="text-base md:text-lg text-black/80 mb-2">
+        <p className="text-lg md:text-xl text-black/80 mb-2" style={{ fontFamily: 'Poppins, sans-serif' }}>
           Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod
         </p>
       </div>
       {/* Right Side - Carousel */}
       <div className="flex-1 w-full max-w-xl relative">
         {/* Gradient shadow left */}
-        <div className="absolute left-0 top-0 h-full w-16 z-10 pointer-events-none" style={{background: "linear-gradient(to right, #fff 0%, #3b72bb22 100%)"}} />
+        <div className="absolute left-0 top-0 h-full w-16 z-10 pointer-events-none" style={{ background: "linear-gradient(to right, #fff 0%, #3b72bb22 100%)" }} />
         {/* Gradient shadow right */}
-        <div className="absolute right-0 top-0 h-full w-16 z-10 pointer-events-none" style={{background: "linear-gradient(to left, #fff 0%, #3b72bb22 100%)"}} />
+        <div className="absolute right-0 top-0 h-full w-16 z-10 pointer-events-none" style={{ background: "linear-gradient(to left, #fff 0%, #3b72bb22 100%)" }} />
         <Slider {...settings} className="proud-moments-slider">
           {proudMoments.map((item, idx) => (
             <div key={idx} className="px-4">
-              <div className="bg-[#4176C6] rounded-2xl flex items-center justify-center h-64 md:h-72 shadow-xl transition-all duration-300">
+              <div className="bg-blue-600 rounded-3xl flex items-center justify-center h-64 md:h-72 shadow-xl border-4 border-white transition-all duration-300">
                 <Image src={item.src} alt={item.alt} width={300} height={300} className="object-contain rounded-xl" />
               </div>
             </div>

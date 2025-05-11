@@ -19,15 +19,15 @@ const HeroSection = () => {
       {/* <div className="absolute inset-0 bg-black/40" /> */}
 
       {/* Text Content */}
-      <div className="z-10 flex-1 flex flex-col justify-center px-6 md:px-16 py-12 md:py-0">
-        <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
+      <div className="z-10 flex-1 flex flex-col justify-center px-6 md:px-16 py-12 md:py-0 text-left">
+        <h1 className="text-5xl md:text-7xl font-extrabold leading-tight text-white mb-4" style={{ fontFamily: 'Poppins, sans-serif', letterSpacing: '-1px' }}>
           I AM <br />
           <span className="text-white">Rohan Shah</span>
         </h1>
-        <p className="text-lg md:text-xl text-white mb-6 max-w-md">
+        <p className="text-xl md:text-2xl font-medium text-white mb-8 max-w-md" style={{ fontFamily: 'Poppins, sans-serif' }}>
           Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
         </p>
-        <button className="bg-orange-500 hover:bg-orange-600 text-white font-semibold px-6 py-2 rounded shadow w-fit cursor-pointer">
+        <button className="bg-orange-500 hover:bg-orange-600 text-white font-bold text-lg px-8 py-3 rounded-lg shadow-orange transition-all duration-200 w-fit cursor-pointer" style={{ fontFamily: 'Poppins, sans-serif', boxShadow: '0 4px 20px 0 rgba(255, 87, 34, 0.3)' }}>
           Get in Touch
         </button>
       </div>

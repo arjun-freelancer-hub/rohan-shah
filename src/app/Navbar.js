@@ -11,7 +11,7 @@ export default function Navbar() {
       </div>
       {/* Hamburger for mobile */}
       <button
-        className="md:hidden flex flex-col gap-1.5 focus:outline-none"
+        className="cursor-pointer flex flex-col gap-1.5 focus:outline-none"
         onClick={() => setOpen((v) => !v)}
         aria-label="Toggle menu"
       >

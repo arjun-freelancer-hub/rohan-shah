@@ -108,15 +108,16 @@ const MedalSection = () => {
           <div
             key={idx}
             className={clsx(
-              "medal-box-shadow bg-white rounded-2xl flex items-center justify-center min-w-[220px] min-h-[220px] max-w-[220px] max-h-[220px] transition-transform duration-300 mx-2",
+              "medal-box-shadow bg-white rounded-3xl flex items-center justify-center min-w-[240px] min-h-[240px] max-w-[240px] max-h-[240px] transition-transform duration-300 mx-4",
               { "opacity-60": scales[idx] < 1 }
             )}
             style={{
               transform: `scale(${scales[idx]})`,
               scrollSnapAlign: "center",
+              fontFamily: 'Poppins, sans-serif',
             }}
           >
-            <span className="font-semibold text-lg text-center">{medal.name}</span>
+            <span className="font-extrabold text-black text-3xl text-center" style={{ fontFamily: 'Poppins, sans-serif', letterSpacing: '-0.5px' }}> {medal.name} </span>
           </div>
         ))}
       </div>
