@@ -12,7 +12,7 @@ export default function Navbar() {
       </Link>
 
       {/* Desktop Menu - Appears inline in navbar */}
-      <div className={`hidden md:flex gap-8 text-base font-medium text-black transition-all duration-300 ${open ? 'opacity-100 visible' : 'opacity-0 invisible'
+      <div className={`hidden md:flex items-center gap-8 text-base font-medium text-black transition-all duration-300 ${open ? 'opacity-100 visible' : 'opacity-0 invisible'
         }`}>
         <a href="/" className="hover:text-orange-500 transition">HOME</a>
         <a href="#about" className="hover:text-orange-500 transition">ABOUT</a>
@@ -41,16 +41,18 @@ export default function Navbar() {
 
       {/* Animated Hamburger Button - Visible on all screens */}
       <button
-        className="cursor-pointer w-6 h-6 relative focus:outline-none"
+        className="cursor-pointer w-6 h-6 relative focus:outline-none flex items-center justify-center"
         onClick={() => setOpen((v) => !v)}
         aria-label="Toggle menu"
       >
-        <span className={`absolute block w-6 h-0.5 bg-black rounded transition-all duration-300 ${open ? 'rotate-45 translate-y-2.5' : ''
-          }`}></span>
-        <span className={`absolute block w-6 h-0.5 bg-black rounded transition-all duration-300 ${open ? 'opacity-0' : 'translate-y-2.5'
-          }`}></span>
-        <span className={`absolute block w-6 h-0.5 bg-black rounded transition-all duration-300 ${open ? '-rotate-45 translate-y-2.5' : 'translate-y-5'
-          }`}></span>
+        <div className="relative w-6 h-5">
+          <span className={`absolute block w-6 h-0.5 bg-black rounded transition-all duration-300 ${open ? 'rotate-45 translate-y-2' : ''
+            }`}></span>
+          <span className={`absolute block w-6 h-0.5 bg-black rounded transition-all duration-300 ${open ? 'opacity-0' : 'translate-y-2'
+            }`}></span>
+          <span className={`absolute block w-6 h-0.5 bg-black rounded transition-all duration-300 ${open ? '-rotate-45 translate-y-2' : 'translate-y-4'
+            }`}></span>
+        </div>
       </button>
     </nav>
   );
