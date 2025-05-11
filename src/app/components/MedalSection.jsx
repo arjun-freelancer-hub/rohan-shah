@@ -2,14 +2,37 @@
 import React, { useRef, useEffect, useState } from "react";
 import clsx from "clsx";
 import "../globals.css";
+import { FaMedal } from "react-icons/fa";
 
 const medals = [
-  { name: "meddals" },
-  { name: "meddals" },
-  { name: "meddals" },
-  { name: "meddals" },
-  { name: "meddals" },
-  { name: "meddals" },
+  {
+    bg: "bg-[#f83097]",
+    title: "1 Gold Medal",
+    event: "International Strength Lifting & Incline Bench press Championship, 2023",
+    year: "2023",
+    country: "Nepal"
+  },
+  {
+    bg: "bg-[#6718e9]",
+    title: "2 Bronze Medals",
+    event: "9th World Strength Lifting & Incline Bench press Championship, 2022",
+    year: "2022",
+    country: "Kyrgyzstan"
+  },
+  {
+    bg: "bg-[#d025ce]",
+    title: "2 Gold Medals",
+    event: "Global Power Alliance Power Lifting EUROASIA Championship, 2020",
+    year: "2020",
+    country: "Ukraine"
+  },
+  {
+    bg: "bg-[#e97518]",
+    title: "2 Bronze Medals",
+    event: "8th World Strength Lifting & Incline Bench press Championship, 2020",
+    year: "2020",
+    country: "Thailand"
+  }
 ];
 
 function useMedalVisibility(containerRef, count) {
@@ -62,7 +85,7 @@ const MedalSection = () => {
       {/* <h2 className="text-2xl font-bold mb-6 text-center">Medals</h2> */}
       <div
         ref={containerRef}
-        className="flex overflow-x-auto gap-4 px-4 py-8 scrollbar-hide"
+        className="flex overflow-x-auto justify-center gap-2 px-4 py-8 scrollbar-hide"
         style={{ scrollSnapType: "x mandatory", WebkitOverflowScrolling: "touch", cursor: "grab" }}
         onMouseDown={e => {
           const container = containerRef.current;
@@ -108,7 +131,7 @@ const MedalSection = () => {
           <div
             key={idx}
             className={clsx(
-              "medal-box-shadow bg-white rounded-3xl flex items-center justify-center min-w-[240px] min-h-[240px] max-w-[240px] max-h-[240px] transition-transform duration-300 mx-4",
+              `medal-box-shadow ${medal.bg} rounded-3xl flex flex-col items-start justify-start min-w-[300px] min-h-[250px] max-w-[300px] max-h-[320px] transition-transform duration-300 mx-2 p-6 relative overflow-hidden`,
               { "opacity-60": scales[idx] < 1 }
             )}
             style={{
@@ -117,7 +140,15 @@ const MedalSection = () => {
               fontFamily: 'Poppins, sans-serif',
             }}
           >
-            <span className="font-extrabold text-black text-3xl text-center" style={{ fontFamily: 'Poppins, sans-serif', letterSpacing: '-0.5px' }}> {medal.name} </span>
+            <div className="absolute bottom-6 right-6 opacity-30 select-none pointer-events-none" style={{ fontSize: '110px', color: '#fff' }}>
+              <FaMedal style={{ color: '#fff', filter: 'drop-shadow(0 0 2px #e2a400)' }} />
+            </div>
+            <div className="z-10">
+              <div className="font-extrabold text-white text-2xl mb-2" style={{ letterSpacing: '-0.5px' }}>{medal.title}</div>
+              <div className="font-semibold text-white text-base mb-2 leading-snug">{medal.event}</div>
+              <div className="font-bold text-white text-lg mb-1">{medal.year}</div>
+              <div className="text-white text-base opacity-90">{medal.country}</div>
+            </div>
           </div>
         ))}
       </div>

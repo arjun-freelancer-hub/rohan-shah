@@ -8,7 +8,7 @@ export default function BehindThePassion() {
           The Person Behind the Passion
         </h2>
       </div>
-      <div className="bg-blue-600 rounded-3xl shadow-2xl p-10 pt-20 flex flex-col md:flex-row items-center w-full max-w-5xl relative mt-2">
+      <div className="bg-blue-600 rounded-3xl shadow-2xl p-10 pt-20 flex flex-col md:flex-row items-center w-full max-w-6xl relative mt-2">
         <div className="flex-1 text-white text-lg md:text-xl space-y-2 text-left" style={{ fontFamily: 'Poppins, sans-serif' }}>
           <p>Today we have a International Player who has represented India in various International Games worldwide and he is from Bilaspur.</p>
           <p>He is a Businessmen along with Active sports player.</p>
