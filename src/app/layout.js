@@ -2,6 +2,7 @@ import { Poppins } from "next/font/google";
 import "./globals.css";
 import Navbar from "./Navbar";
 import Footer from "./components/Footer";
+import ScrollToTop from "./components/ScrollToTop";
 
 
 
@@ -23,6 +24,7 @@ export default function RootLayout({ children }) {
       <body
         className={`${poppins.variable} antialiased`}
       >
+        <ScrollToTop />
         <Navbar />
         <div className="min-h-screen bg-white flex flex-col mt-20">
           {children}
