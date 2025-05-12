@@ -41,8 +41,8 @@ export default function Navbar() {
 
       {/* Animated Hamburger Button - Visible on all screens */}
       <button
-        className="cursor-pointer w-6 h-6 relative focus:outline-none flex items-center justify-center z-50"
-        onClick={() => setOpen((v) => !v)}
+        className="bg-red-500 cursor-pointer w-6 h-6 relative focus:outline-none flex items-center justify-center z-50"
+        onClick={() => { alert("clicked"); setOpen((v) => !v) }}
         aria-label="Toggle menu"
       >
         <div className="relative w-6 h-5">
