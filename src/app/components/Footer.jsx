@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 
 const Footer = () => {
   return (
@@ -37,30 +38,30 @@ const Footer = () => {
           <div className="mb-6 md:mb-0 min-w-[160px]">
             <h4 className="font-bold text-xl mb-2" style={{ fontFamily: 'Poppins, sans-serif' }}>Follow me</h4>
             <div className="flex gap-4 text-2xl">
-              <a href="#" aria-label="Facebook" className="hover:text-blue-600"><i className="fab fa-facebook-f"></i></a>
-              <a href="#" aria-label="Instagram" className="hover:text-pink-500"><i className="fab fa-instagram"></i></a>
-              <a href="#" aria-label="YouTube" className="hover:text-red-600"><i className="fab fa-youtube"></i></a>
-              <a href="#" aria-label="LinkedIn" className="hover:text-blue-800"><i className="fab fa-linkedin-in"></i></a>
+              <Link href="#" aria-label="Facebook" className="hover:text-blue-600"><i className="fab fa-facebook-f"></i></Link>
+              <Link href="#" aria-label="Instagram" className="hover:text-pink-500"><i className="fab fa-instagram"></i></Link>
+              <Link href="#" aria-label="YouTube" className="hover:text-red-600"><i className="fab fa-youtube"></i></Link>
+              <Link href="#" aria-label="LinkedIn" className="hover:text-blue-800"><i className="fab fa-linkedin-in"></i></Link>
             </div>
           </div>
           <div className="mb-6 md:mb-0 min-w-[160px]">
             <h4 className="font-bold text-xl mb-2" style={{ fontFamily: 'Poppins, sans-serif' }}>Quick links</h4>
             <ul className="text-left text-base space-y-1" style={{ fontFamily: 'Poppins, sans-serif' }}>
-              <li><a href="/" className="hover:underline">HOME</a></li>
-              <li><a href="/about" className="hover:underline">ABOUT</a></li>
-              <li><a href="#" className="hover:underline">ACHIEVEMENTS</a></li>
-              <li><a href="#" className="hover:underline">PHOTOS</a></li>
-              <li><a href="#" className="hover:underline">VIDEOS</a></li>
-              <li><a href="#" className="hover:underline">NEWS & ARTICLES</a></li>
-              <li><a href="#" className="hover:underline">BLOG</a></li>
-              <li><a href="#" className="hover:underline">CONTACT</a></li>
+              <li><Link href="/" className="hover:underline">HOME</Link></li>
+              <li><Link href="/about" className="hover:underline">ABOUT</Link></li>
+              <li><Link href="#" className="hover:underline">ACHIEVEMENTS</Link></li>
+              <li><Link href="#" className="hover:underline">PHOTOS</Link></li>
+              <li><Link href="#" className="hover:underline">VIDEOS</Link></li>
+              <li><Link href="#" className="hover:underline">NEWS & ARTICLES</Link></li>
+              <li><Link href="#" className="hover:underline">BLOG</Link></li>
+              <li><Link href="#" className="hover:underline">CONTACT</Link></li>
             </ul>
           </div>
           <div className="min-w-[160px]">
             <h4 className="font-bold text-xl mb-2" style={{ fontFamily: 'Poppins, sans-serif' }}>Legal</h4>
             <ul className="text-left text-base space-y-1" style={{ fontFamily: 'Poppins, sans-serif' }}>
-              <li><a href="#" className="hover:underline">Terms and conditions</a></li>
-              <li><a href="#" className="hover:underline">privacy policies</a></li>
+              <li><Link href="#" className="hover:underline">Terms and conditions</Link></li>
+              <li><Link href="#" className="hover:underline">privacy policies</Link></li>
             </ul>
           </div>
         </div>
