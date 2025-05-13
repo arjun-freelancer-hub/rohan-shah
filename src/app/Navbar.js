@@ -4,7 +4,7 @@ import { useState } from "react";
 import { usePathname } from "next/navigation";
 
 export default function Navbar() {
-  const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState(true);
   const pathname = usePathname();
 
   const isActive = (path) => {
@@ -31,8 +31,8 @@ export default function Navbar() {
         <Link href="/about" className={linkClasses("/about")}>ABOUT</Link>
         <Link href="#achievements" className={linkClasses("#achievements")}>ACHIEVEMENTS</Link>
         <Link href="/gallery" className={linkClasses("/gallery")}>GALLERY</Link>
-        <Link href="#news" className={linkClasses("#news")}>NEWS & ARTICLES</Link>
-        <Link href="#blog" className={linkClasses("#blog")}>BLOG</Link>
+        <Link href="/article" className={linkClasses("/article")}>NEWS & ARTICLES</Link>
+        <Link href="/blog" className={linkClasses("/blog")}>BLOG</Link>
         <Link href="#contact" className={linkClasses("#contact")}>CONTACT</Link>
       </div>
 
@@ -43,15 +43,15 @@ export default function Navbar() {
           <Link href="#about" className={`w-full text-center py-2 text-base font-medium ${linkClasses("#about")}`}>ABOUT</Link>
           <Link href="#achievements" className={`w-full text-center py-2 text-base font-medium ${linkClasses("#achievements")}`}>ACHIEVEMENTS</Link>
           <Link href="/gallery" className={`w-full text-center py-2 text-base font-medium ${linkClasses("/gallery")}`}>GALLERY</Link>
-          <Link href="#news" className={`w-full text-center py-2 text-base font-medium ${linkClasses("#news")}`}>NEWS & ARTICLES</Link>
-          <Link href="#blog" className={`w-full text-center py-2 text-base font-medium ${linkClasses("#blog")}`}>BLOG</Link>
+          <Link href="/article" className={`w-full text-center py-2 text-base font-medium ${linkClasses("/article")}`}>NEWS & ARTICLES</Link>
+          <Link href="/blog" className={`w-full text-center py-2 text-base font-medium ${linkClasses("/blog")}`}>BLOG</Link>
           <Link href="#contact" className={`w-full text-center py-2 text-base font-medium ${linkClasses("#contact")}`}>CONTACT</Link>
         </div>
       </div>
 
-      {/* Animated Hamburger Button - Visible on all screens */}
+      {/* Animated Hamburger Button - Only visible on mobile */}
       <button
-        className="cursor-pointer w-6 h-6 relative focus:outline-none flex items-center justify-center z-50"
+        className="md:hidden cursor-pointer w-6 h-6 relative focus:outline-none flex items-center justify-center z-50"
         onClick={() => setOpen((v) => !v)}
         aria-label="Toggle menu"
       >

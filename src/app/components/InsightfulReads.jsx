@@ -82,7 +82,7 @@ export default function InsightfulReads() {
   };
 
   return (
-    <section className="w-full flex flex-col items-center py-16 px-4 md:px-16 bg-white">
+    <section className="w-full flex flex-col items-center py-16 px-4 md:px-16">
       <h2 className="text-5xl md:text-7xl font-extrabold text-black mb-10 text-left w-full" style={{ fontFamily: 'Poppins, sans-serif', letterSpacing: '-1px' }}>
         Insightful <br /> Read
       </h2>

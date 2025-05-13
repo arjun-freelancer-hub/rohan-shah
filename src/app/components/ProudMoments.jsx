@@ -34,7 +34,7 @@ export default function ProudMoments() {
   };
 
   return (
-    <section className="w-full flex flex-col md:flex-row items-center justify-between py-16 px-4 md:px-16 bg-white">
+    <section className="w-full flex flex-col md:flex-row items-center justify-between py-16 px-4 md:px-16">
       {/* Left Side */}
       <div className="flex-1 flex flex-col items-start mb-8 md:mb-0 md:mr-12 max-w-md">
         <h2 className="text-5xl md:text-7xl font-extrabold text-black leading-tight mb-4" style={{ fontFamily: 'Poppins, sans-serif', letterSpacing: '-1px' }}>

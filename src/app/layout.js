@@ -26,7 +26,7 @@ export default function RootLayout({ children }) {
       >
         <ScrollToTop />
         <Navbar />
-        <div className="min-h-screen bg-white flex flex-col mt-20">
+        <div className="min-h-screen bg-gray-50 flex flex-col mt-20">
           {children}
         </div>
         <Footer />

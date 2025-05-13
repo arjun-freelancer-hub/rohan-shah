@@ -94,7 +94,7 @@ export default function PhotoGallery() {
     };
 
     return (
-        <div className="min-h-screen bg-white py-20 px-4 md:px-8">
+        <div className="min-h-screen bg-gray-50 py-20 px-4 md:px-8">
             {/* Page Title */}
             <h1 className="text-5xl md:text-7xl font-extrabold text-black mb-12 text-center" style={{ fontFamily: 'Poppins, sans-serif', letterSpacing: '-1px' }}>
                 Photos
@@ -105,7 +105,7 @@ export default function PhotoGallery() {
                 {photoGallery.map((image) => (
                     <div
                         key={image.id}
-                        className="group relative overflow-hidden rounded-2xl cursor-pointer transition-all duration-300 shadow-lg hover:shadow-2xl w-full"
+                        className="bg-white group relative overflow-hidden rounded-2xl cursor-pointer transition-all duration-300 shadow-lg hover:shadow-2xl w-full"
                         onClick={() => handleImageClick(image)}
                     >
                         <Image

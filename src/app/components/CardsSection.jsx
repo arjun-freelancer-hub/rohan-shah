@@ -3,7 +3,7 @@ import Image from "next/image"
 const CardSection = () => {
   return <>
     {/* Cards Section */}
-    <section className="w-full flex flex-col items-center py-14 bg-white">
+    <section className="w-full flex flex-col items-center py-14">
       <h2 className="text-5xl md:text-7xl font-extrabold mb-20 text-black text-center" style={{ fontFamily: 'Poppins, sans-serif', letterSpacing: '-1px' }}>
         Heading 1
       </h2>
